@@ -38,7 +38,6 @@ body{
 
 .row-content {
     margin:0px auto;
-    padding: 50px 0px 50px 0px;
     border-bottom: 1px ridge;
     min-height:400px;
 }
@@ -54,9 +53,50 @@ body{
     background: #7986CB ;
     color:floralwhite;
 }
-
+img{
+    width: 139px;
+    height: 116px;
+}
+.row.row-header h1{
+  position: absolute;
+    top: -10%;
+    left: 23%;
+    font-size: 26px;
+    text-decoration: underline;
+}
+.h1-info{
+    position: absolute;
+    top: 35%;
+    left: 22%;
+}
+h2{
+   text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    text-shadow: 0px 1px #2335b2;
+    color: #18b66c;
+}
 address{
     font-size:80%;
     margin:0px;
     color:#0f0f0f;
+}
+.poster{
+  font-style:italic; 
+  color: grey; 
+  float:right;
+}
+hr{
+  width: 66%;
+}
+span.glyphicon.glyphicon-thumbs-up{
+    color: blue;
+    font-size: 18px;
+}
+button
+{
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
