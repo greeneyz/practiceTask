@@ -69,17 +69,22 @@
     <div class="container">
 			 <div class="row row-content">
 			    <h2>Guestbook Wall</h2>
-                  <div class="col-sm-12 col-md-10" ng-app="myApp" ng-controller="customersCtrl">
+                  <div class="col-sm-12 col-md-11" ng-app="myApp" ng-controller="customersCtrl">
                      <table class="table table-striped table-hover">
 													<tbody>
 													<tr ng-repeat="feedback in guestbook">
-														<td>{{ feedback.feedback }} <br> <hr>
-															<button id="increase-like" onclick="increaseLike()">
+														<td>
+															<span ng-if="feedback.path"><img src="{{feedback.path}}" class="img-rounded profile" alt="guest" /></span>
+															{{ feedback.feedback }} <br> 
+															<button class="increase-like" onclick="increaseLike()">
 																<span class="glyphicon glyphicon-thumbs-up"></span>
 															</button>
 															<span id="like-counter"></span>
-															<span class="poster">Posted By: {{ feedback.fname }} {{ feedback.lname}}</span> </td>
-													</tr>
+															<span class="poster">Posted By: {{ feedback.fname }} {{ feedback.lname}}</span><br>
+															<span class="poster">{{feedback.date}}</span> 
+														</td>
+													    
+														</tr>
 													</tbody>
 											</table>
 										</div>
@@ -92,7 +97,7 @@
         <div class="row row-content">
 
             <div class="col-xs-12 col-sm-9">
-				<form class="form-horizontal" role="form">
+				<form class="form-horizontal" role="form" method="POST" action="postBook.php" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="firstname" class="col-sm-2 control-label">First Name</label>                        
 						<div class="col-sm-5">
@@ -111,6 +116,11 @@
                             <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
                         </div>
                     </div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Photo:</label> <div class="col-sm-5"> <input type="file" name="photo"></div>
+
+					</div>
+
 					 <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-primary">Send Feedback</button>

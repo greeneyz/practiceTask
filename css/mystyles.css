@@ -86,9 +86,7 @@ address{
   color: grey; 
   float:right;
 }
-hr{
-  width: 66%;
-}
+
 span.glyphicon.glyphicon-thumbs-up{
     color: blue;
     font-size: 18px;
@@ -98,5 +96,9 @@ button
     background: transparent;
     border: none;
     margin: 0;
-    padding: 0;
+    padding: 0;    
+}
+img.profile{
+  width:30px;
+  height:30px;
 }

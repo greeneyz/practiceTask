@@ -3,7 +3,7 @@ $con = mysqli_connect('127.0.0.1','root','123','guestbook');
 if(!$con){
 die("couldnt connect");
 }
-$query = "SELECT * FROM feedback";
+$query = "SELECT fname,lname,feedback,date, path FROM feedback";
 $result = $con->query($query);
 $r = array();
 if( $result->num_rows>0){

@@ -10,4 +10,5 @@ to implement two different variations.
 The design has many flaws and can be improved much much better; but it has been implmeneted for the sake of delivering the project with 
 functional requirements.</p>
 
+sudo chmod 777 {folderName} - to give access to folder
 
