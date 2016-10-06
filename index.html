@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head 
          content must come *after* these tags -->
-	<title>Ristorante Con Fusion</title>
+	<title>Guest Book</title>
 		      <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -54,16 +54,15 @@
         <div class="container">
             <div class="row row-header">
                 <div class="col-xs-12 col-sm-8">
-                    <h1>Guest Book</h1>
+										<h1>Guest Book</h1>
                     <p style="padding:20px;"></p>
-                    <p> Upload your photo, write your name and post whatever you want :) </p>
+                    <span style="font-size:14px; color:#b7bab3; font-style:italic;"> Upload your photo, write your name and post whatever you want :) </span>
                 </div>
                 <div class="col-xs-12 col-sm-4">
                 </div>
             </div>
         </div>
-    </header>
-
+	</header>
     <div class="container">
 			 <div class="row row-content">
 			<div class="form-group">
@@ -71,10 +70,9 @@
                         <div class="col-sm-5">
                         
 												<div ng-app="myApp" ng-controller="customersCtrl"> 
-												<table>
+												<table class="striped">
 													<tr ng-repeat="feedback in guestbook">
-														<td>{{ feedback.feedback }}</td>
-														<td>{{ feedback.fname }}</td>
+														<td>{{ feedback.feedback }} <br> <span style="font-style:italic; color: grey;">{{ feedback.fname }} {{ feedback.lname}}</span> </td>
 													</tr>
 												</table>
 												</div>
